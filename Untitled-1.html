@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Inter Tight' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<title>
+
+</title>
+<style>
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 300px;
+    box-sizing: border-box;
+    font-family: 'Inter Tight';
+}
+nav {
+    background-color: #F44336;
+    color: white;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1;
+}
+nav button {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #F44336;
+    border: none;
+    color: white;
+    display: none;
+}
+nav button:hover {
+    background-color: #c8c8c8;
+    color: black;
+}
+nav h2 {
+    width: 100%;
+    height: auto;
+    padding: 85px 20px 50px;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    font-size: 25px;
+}
+nav div p {
+    margin: 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    width: 100%;
+}
+nav div p:hover {
+    background-color: white;
+    color: black;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F44336;
+    color: white;
+    box-sizing: border-box;
+}
+.nav .i {
+    float: left;
+    padding: 0 5%;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+}
+.nav i {
+    padding: 10px;
+}
+.nav i:hover {
+    background-color: #c8c8c8;
+    color: black;
+}
+.nav .h2{
+    width: 90%;
+    height: auto;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    font-size: 15px;
+    float: left;
+}
+
+.body {
+    width: 100%;
+    margin: 0;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+.body .h1 {
+    font-size: 70px;
+    letter-spacing: 2px;
+    padding: 75px 0 20px;
+    margin: 0;
+}
+.body .h1_2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    color: #F44336  ;
+}
+.body hr {
+    width: 60px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 30px 0;
+    background-color: #ed2f21;
+}
+.company_img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+.company_img div {
+    width: 50%;
+    height: auto;
+    margin: 0 8px;
+    box-sizing: border-box;
+}
+.company_img div a img {
+    width: 100%;
+    opacity: 0.8;
+    padding: 3px 0;
+}
+.company_img div img:hover {
+    opacity: 1;
+}
+.services {
+    padding: 20px 0 ;
+}
+.services p {
+    font-size: 19px;
+    line-height: 25px;
+}
+.company_founder {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+.company_founder div {
+    width: 33.33%;
+    box-sizing: border-box;
+    height: auto;
+    background-color: #F5F5F5;
+    margin: 0 10px;
+}
+.company_founder div img {
+    width: 100%;
+    filter: grayscale(0.7);
+}
+.company_founder div h4 {
+    font-size: 25px;
+    margin: 10px 15px;
+    font-weight: 100;
+}
+.company_founder div p {
+    font-size: 17px;
+    line-height: 25px;
+    padding: 0px 15px;
+    opacity: 0.9;
+}
+.company_founder h6 {
+    color: #7e7e7e;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 20px;
+    margin: 0;
+    padding: 15px 15px 10px;
+}
+.Packages {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+.Packages .Packages_info {
+    font-size: 18px;
+    letter-spacing: 0.6px;
+}
+.Packages .Packages_cost {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+}
+.Packages_cost div {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.Packages_cost .Packages_basic {
+    background-color: #606060;
+    margin: 0;
+    padding: 30px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 100;
+}
+.Packages_cost .Packages_pro {
+    background-color: #F44336;
+    margin: 0;
+    padding: 30px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 100;
+}
+.Packages_cost p {
+    background-color: #F4F4F4;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #ebe9e9;
+}
+.Packages_cost p span {
+    font-size: 30px;
+}
+.Packages_cost p a {
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+.basic_button {
+    padding: 15px 25px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}
+.pro_button {
+    padding: 15px 25px;
+    border: none;
+    background-color: #F44336;
+    color: white;
+    font-size: 15px;
+}
+.Packages div p button:hover {
+    background-color: black;
+    color: white;
+}
+.contect {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+}
+.contect .contect_p {
+    font-size: 17px;
+    word-spacing: 4px;
+}
+.contect input {
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+.contect button {
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #F44336;
+    color: white;
+    font-size: 15px;
+}
+.contect button:hover {
+    background-color: #c8c8c8;
+    color: black;
+}
+footer{
+    background-color: #F4F4F4;
+    width: 100%;
+    margin: 0;
+    padding: 45px;
+    box-sizing: border-box;
+}
+footer p {
+    direction: rtl;
+}
+footer p a {
+    text-decoration: none;
+    color: black;
+}
+footer p a:hover {
+    color: #7e7e7e;
+} 
+@media screen and (max-width: 1000px) {
+    body {
+        padding-left: 0;
+    }
+    nav {
+        display: none;
+    }
+    nav button {
+        display: block;
+    }
+    .nav {
+        display: flex;
+    }
+    .body {
+        width: 100%;
+       padding: 0px 10px;
+       box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 600px) {
+    .company_img {
+        flex-direction: column;
+    }
+    .company_img div {
+        width: 100%;
+    }
+    .company_founder {
+        flex-direction: column;
+    }
+    .company_founder div {
+        width: 100%;
+    }
+    .Packages .Packages_cost {
+        flex-direction: column;
+    }
+    .Packages_cost div {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+    <button onclick="document.getElementById('nav').style.display='none'">Close Menu</button>
+    <h2>Company <br> Name</h2>
+    <div>
+        <p>Home</p>
+        <p>Showcase</p>
+        <p>Services</p>
+        <p>Designers</p>
+        <p>Packages</p>
+        <p>Contect</p>
+    </div>
+</nav>
+<div class="nav">
+    <div class="i"><i class="fa fa-bars" onclick="document.getElementById('nav').style.display='block'"></i></div>
+    <div class="h2"><h2>Company Name</h2></div>
+</div>
+<div class="body">
+    <h1 class="h1">Interior Design</h1>
+    <h1 class="h1_2">Showcase.</h1>
+    <hr>
+    <div class="company_img">
+        <div>
+            <a href="kitchenconcrete.jpg"><img src="kitchenconcrete.jpg"></a>
+            <a href="livingroom.jpg"><img src="livingroom.jpg"></a>
+            <a href="diningroom.jpg"><img src="diningroom.jpg"></a>
+        </div>
+        <div>
+            <a href="atrium.jpg"><img src="atrium.jpg"></a>
+            <a href="bedroom.jpg"><img src="bedroom.jpg"></a>
+            <a href="livingroom2.jpg"><img src="livingroom2.jpg"></a>
+        </div>
+    </div>
+    <div class="services">
+        <h1 class="h1_2">Services.</h1>
+        <hr>
+        <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+        <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="services">
+        <h1 class="h1_2">Designers.</h1>
+        <hr>
+        <p>The best team in the world.</p>
+        <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Our designers are thoughtfully chosen:</p>
+        <div class="company_founder">
+            <div>
+                <img src="team2.jpg">
+                <h4>John Doe</h4>
+                <h6>CEO & Founder</h6>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <div>
+                <img src="team1.jpg">
+                <h4>Jane Doe</h4>
+                <h6>Designer</h6>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <div>
+                <img src="team3.jpg">
+                <h4>Mike Ross</h4>
+                <h6>Architect</h6>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="Packages">
+        <h1 class="h1_2">Packages.</h1>
+        <hr>
+        <p class="Packages_info">Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+        <div class="Packages_cost">
+            <div>
+                <h4 class="Packages_basic">Basic</h4>
+                <p>Floorplanning</p>
+                <p>10 hours support</p>
+                <p>Photography</p>
+                <p>20% furniture discount</p>
+                <p>Good deals</p>
+                <p><span>$ 199</span><br><br><a>per room</a></p>
+                <p><button class="basic_button">Sign up</button></p>
+            </div>
+            <div>
+                <h4 class="Packages_pro">Pro</h4>
+                <p>Floorplanning</p>
+                <p>50 hours support</p>
+                <p>Photography</p>
+                <p>50% furniture discount</p>
+                <p>GREAT deals</p>
+                <p><span>$ 249</span><br><br><a>per room</a></p>
+                <p><button class="pro_button">Sign up</button></p>
+            </div>
+        </div>
+    </div>
+    <div class="contect">
+        <h1 class="h1_2">Contact.</h1>
+        <hr>
+        <p class="contect_p">Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" required><br><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email"><br><br>
+        <label for="message">Message</label><br>
+        <input type="text" name="message"><br><br>
+        <button>Send Message</button>
+    </div>
+</div>
+<footer>
+    <p>Powered by <a href="#">w3.css</a></p>
+</footer>
+</body>
+</html>
